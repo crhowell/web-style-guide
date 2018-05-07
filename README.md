@@ -1,2 +1,2 @@
-# web-style-guide
+# Web Style Guide
 FEWD Project 5
