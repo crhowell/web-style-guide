@@ -1,0 +1,25 @@
+// Clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// For pseudo-elements
+%pseudos {
+  display: block;
+  content: ''; 
+  position: absolute;
+}
+
+// Nav items 
+%nav-item-display{
+    display: inline-block;
+    margin: 0 em(12px);
+}
+
+%nav-item-link{
+    display: block;
+}

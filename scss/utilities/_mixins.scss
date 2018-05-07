@@ -1,0 +1,66 @@
+// Mixins
+
+@mixin bg-colors($map){
+    @each $theme, $color in $map {
+        &--#{$theme} {
+            background-color: $color;
+        }
+    }
+}
+
+@mixin img-replace($img, $w, $h, $disp: block){
+    display: $disp;
+    background-image: url('#{$path--rel}/#{$img}');
+    background-repeat: no-repeat;
+    width: $w;
+    height: $h;
+}
+
+@mixin p-el(
+    $el,
+    $el-w: null,
+    $el-h: null){
+    
+    @if $el == "before" or $el == "after" {
+        &:#{$el}{
+            @extend %pseudos;
+            width: $el-w;
+            height: $el-h;
+            @content;
+        }
+    }
+    @else {
+        @warn " #{$el} is not a valid pseudo-element.";
+    }
+}
+
+// BEM stuff
+
+@mixin e($element){
+    &__#{$element}{
+        @content;
+    }
+}
+
+@mixin m($modifier){
+    &--#{$modifier}{
+        @content;
+    }
+}
+
+
+@mixin ui($map, $p-el:null) {
+    @each $theme, $color in $map {
+        @include m($theme) {
+            background-color: $color;
+        }
+    }
+}
+
+// Adjacent sibling
+@mixin all-but-first($margin: 1em){
+    & + & {
+        margin-left: $margin;
+        @content;
+    }
+}
