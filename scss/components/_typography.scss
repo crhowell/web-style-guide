@@ -1,0 +1,35 @@
+//Headlines
+.headline {
+    &--primary{
+        @extend %hl-primary;
+        margin-bottom: em(70px, 42px);
+        color: $color-secondary;
+    }
+    
+    &--secondary {
+        @extend %hl-secondary;
+        margin-bottom: em(22px, 24px);
+    }
+}
+
+.blockquote {
+    color: palette(grey, light);
+    margin: em(32px, 24px) 0;
+    padding-left: 3%;
+    padding-right: 9%;
+    border-left: em(8px, 24px) solid $color-accent;
+    border-radius: 5px;
+    font-size: em(24px);
+    font-weight: $font-weight--medium;
+    font-style: italic;
+}
+
+.buttons,
+.grids {
+    display: block;
+}
+.link {
+    text-decoration: none;
+    color: $color-primary;
+    font-weight: $font-weight--bold;
+}

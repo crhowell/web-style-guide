@@ -1,0 +1,22 @@
+.img {
+    height: auto;
+    max-width: 100%;
+    @include m(avatar){
+        display: block;
+        border-radius: $br--round;
+        margin: 0 auto;
+        margin-bottom: em(24px);
+    }
+    @include m(logo){
+        margin: 0 auto;
+        margin-bottom: em(42px);
+        @include mq(small){
+            margin-bottom: 0;
+        }
+    }
+
+    @include m(frame){
+        padding: 10px;
+        border: 1px solid palette(grey, x-light);
+    }
+}

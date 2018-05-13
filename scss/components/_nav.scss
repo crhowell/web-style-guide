@@ -1,0 +1,23 @@
+.nav {
+    margin-top: em(15px);
+    margin-bottom: em(25px);
+    list-style: none;
+}
+
+.nav__item{
+    @extend %nav-item-h;
+    a{
+        @extend %nav-item-l;
+        padding: em(15px);
+        border-radius: 8px;
+        font-weight: $font-weight--bold;
+        color: palette(grey);
+    }
+    a:active,
+    a:focus,
+    a:hover {
+        background-color: $color-secondary;
+        color: $white;
+    }
+    // active background-color: $color-secondary;
+}
