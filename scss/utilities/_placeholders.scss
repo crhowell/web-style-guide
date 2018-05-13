@@ -23,3 +23,15 @@
 %nav-item-link{
     display: block;
 }
+
+%btn {
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 8px;
+  color: $white;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: em(14px);
+  font-weight: $font-weight--medium;
+  display: block;
+}

@@ -2,3 +2,11 @@
 .btn {
     @include ui($ui-colors);
 }
+
+[class^="btn--"] {
+    @extend %btn;
+    width: auto;
+    display: inline-block;
+    margin-bottom: em(10px);
+    margin-right: em(15px);
+}

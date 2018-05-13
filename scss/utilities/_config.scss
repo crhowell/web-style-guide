@@ -3,8 +3,8 @@
 // ==========================================================================
 
 // Font Stacks
-$font-url--google           : 'https://fonts.googleapis.com/css?family=Raleway';
-$font-family--pri           : 'Raleway', 'Helevtica Neue', Helevtica, Arial, sans-serif;
+$font-url--google           : 'https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,700i,900';
+$font-family--pri           : 'Lato', sans-serif;
 $font-family--sec           :  Helevtica, Arial, sans-serif;
 
 // Font Weights
@@ -19,17 +19,19 @@ $white  : #fff;
 $black  : #0b0b0b;
 $grey   : #797e83;
 
-$fountain-blue  : #52bab3;
-$emerald        : #5ece7f;
-$sunglo         : #e67478;
-$coral          : #ff784f;
-$purple-magesty : #9279c3;
-$scooter        : #39add1;
+$viking         : #58E1C1;
+$malibu         : #51DDFC;
+$shakespear     : #3FABCA;
+$emerald        : #63CC82;
+$sunglo         : #E4757A;
+$coral          : #FD7856;
+$purple         : #927BC1;
+
 
 // Color Usage
-$color-primary   : $fountain-blue;
-$color-secondary : $scooter;
-$color-accent    : $emerald;
+$color-primary   : $malibu;
+$color-secondary : $viking;
+$color-accent    : $viking;
 $color-shadow    : rgba($black, .2);
 
 // Color Palette Modifiers
@@ -51,17 +53,17 @@ $palettes: (
 );
 // UI Color 
 $ui-colors: (
-    default: $fountain-blue,
+    default: $malibu,
     success: $emerald,
     error: $sunglo,
     warning: $coral,
-    info: $purple-magesty,
+    info: $purple,
 );
 
 // Text
 $base__font-size : 16px;
 $base__line      : 24px;
-
+$letter-space    : 2px;
 // Path to assets
 $path--rel       : "../img";
 
@@ -69,9 +71,12 @@ $path--rel       : "../img";
 $grid-col-width  : 62px;
 $grid-gutter     : 20px;
 $grid-col-count  : 12;
-$grid-max-width  : 1050px;
+$grid-max-width  : 1200px;
 
-// Breakpoints
-$brkpoint-sm    : 1px;
-$brkpoint-md    : 768px;
-$brkpoint-lg    : 1100px;
+// Media breakpoints
+$bp-sm : 480px;
+$bp-md : 879px;
+$bp-lg : 1100px;
+
+// Border Radiu
+$br--round  : 50%;

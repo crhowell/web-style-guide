@@ -64,3 +64,35 @@
         @content;
     }
 }
+
+// Media queries
+@mixin mq($breakpoint){
+    @if ($breakpoint == "small"){
+        @media(min-width: $bp-sm) and (max-width: $bp-md){
+            @content;
+        }
+    }
+    @else if ($breakpoint == "medium"){
+        @media(min-width: $bp-md+1){
+            @content;
+        }
+    }
+    @else if ($breakpoint == "large"){
+        @media (min-width: $bp-lg){
+            @content;
+        }
+    }
+    @else {
+        @error "_mixins.scss: mq argument `#{$breakpoint}` is not a recognized value."
+    }
+}
+
+@mixin grid-columns{
+    @for $i from 1 through $grid-col-count {
+        $context: grid-ctx($grid-col-width, $grid-col-count, $grid-gutter) !global;
+        $target: ($grid-col-width * $i) + ($grid-gutter * ($i - 1));
+        &--#{$i}{
+            width: percentage($target / $context);
+        }
+    }
+}

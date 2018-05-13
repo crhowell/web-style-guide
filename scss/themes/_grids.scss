@@ -1,13 +1,14 @@
 $grid-colors: (
-    grid__col--12 : #DEF4E5,
-    grid__col--8  : #DCE0F2,
-    grid__col--7  : #DCF0EF,
-    grid__col--6  : #FFE3DB,
-    grid__col--5  : #EAEBEC,
-    grid__col--4  : #F8EDD0,
-    grid__col--3  : #D6EEF5,
+    grid__col--12 : #80E8D1,
+    grid__col--8  : #FD9F85,
+    grid__col--7  : #EC9FA3,
+    grid__col--6  : #3FABCA,
+    grid__col--5  : #88D9A0,
+    grid__col--4  : #7EE6FD,
+    grid__col--3  : #DEB2EE,
     grid__col--2  : #C5E2CE
 );
+
 
 // Loop and color each grid.
 @each $value, $color in $grid-colors {

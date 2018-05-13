@@ -2,20 +2,27 @@
 .container {
     @extend %clearfix;
     @extend .centered;
-    width: 90%;
-
+    width: 86%;
     // a nested grid 100%
     [class*="grid__col--"] > & {
         width: 100%;
     }
-
-    // Max width for container
-    @media(min-width: 1100px){
+    @include mq(small){
+        width: 92%;
+    }
+    @include mq(large){
         max-width: $grid-max-width;
     }
 }
-
-[class$="__row"] {
+.grid__row {
+    margin-bottom: em(15px);
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    @include mq(small){
+        flex-direction: column;
+    }
+    @include mq(medium){
+        flex-direction: row;
+    }
 }
