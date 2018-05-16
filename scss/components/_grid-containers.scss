@@ -2,23 +2,22 @@
 .container {
     @extend %clearfix;
     @extend .centered;
-    width: 86%;
-    // a nested grid 100%
-    [class*="grid__col--"] > & {
-        width: 100%;
-    }
+    width: 90%;
+    
     @include mq(small){
-        width: 92%;
+        width: 95%;
     }
     @include mq(large){
         max-width: $grid-max-width;
     }
 }
+.grid__col--12,
 .grid__row {
-    margin-bottom: em(15px);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flexbox(flex, wrap, row, space-around){
+        margin-top: em(15px);
+        margin-bottom: em(15px);
+    }
+
     @include mq(small){
         flex-direction: column;
     }

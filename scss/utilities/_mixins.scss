@@ -96,3 +96,12 @@
         }
     }
 }
+
+// Flexbox
+@mixin flexbox($fdisp: flex, $fdir: null, $fwrap: null, $fjust: null){
+    display: $fdisp;
+    flex-wrap: $fwrap;
+    flex-direction: $fdir;
+    justify-content: $fjust;
+    @content;
+}
