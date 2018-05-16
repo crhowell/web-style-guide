@@ -25,7 +25,8 @@
 }
 
 %btn {
-  padding: 15px 30px;
+  margin-bottom: em(15px);
+  padding: em(15px) em(42px);
   border: 0;
   border-radius: 8px;
   color: $white;
@@ -34,4 +35,10 @@
   font-size: em(14px);
   font-weight: $font-weight--medium;
   display: block;
+}
+
+%img{
+  height: auto;
+  max-width: 100%;
+  align-self: center;
 }
