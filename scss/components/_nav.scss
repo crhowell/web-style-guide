@@ -8,7 +8,7 @@
     @extend %nav-item-h;
     a{
         @extend %nav-item-l;
-        padding: em(15px);
+        padding: em(10px);
         border-radius: 8px;
         font-weight: $font-weight--bold;
         color: palette(grey);
