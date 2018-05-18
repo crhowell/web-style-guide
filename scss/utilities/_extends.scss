@@ -1,14 +1,14 @@
 %nav-item-h {
     @include mq(medium){
-        display: inline-block;
-        margin: 0 em(12px);
+        display: block;
+        margin: 0 em(10px);
     }
 }
 %nav-item-l {
     display: block;
     text-decoration: none;
     color: $black;
-    font-weight: $font-weight--medium;
+    font-weight: $font-weight--light;
 }
 
 %hl-primary {

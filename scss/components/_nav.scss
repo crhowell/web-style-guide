@@ -1,10 +1,20 @@
 .nav {
-    margin-top: em(15px);
-    margin-bottom: em(25px);
-    list-style: none;
+    list-style: none;    
+    @include flexbox(flex, column, null, space-evenly);
+
+    @include mq(medium){
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: em(15px);
+    }
+    
+
 }
 
 .nav__item{
+    display: block;
     @extend %nav-item-h;
     a{
         @extend %nav-item-l;
