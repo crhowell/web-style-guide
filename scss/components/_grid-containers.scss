@@ -13,15 +13,14 @@
 }
 .grid__col--12,
 .grid__row {
-    @include flexbox(flex, wrap, row, space-around){
-        margin-top: em(15px);
-        margin-bottom: em(15px);
-    }
-
     @include mq(small){
         flex-direction: column;
     }
+
     @include mq(medium){
-        flex-direction: row;
+        @include flexbox(flex, wrap, row, space-around){
+            margin-top: em(15px);
+            margin-bottom: em(15px);
+        }
     }
 }
